@@ -11,17 +11,21 @@ A premium, full-stack weather application that combines live meteorological data
 
 - **📍 Smart Autolocation:** Automatically detects your current city on startup via browser geolocation.
 - **🔍 Intelligent Search:** Real-time city suggestions and autocomplete as you type, powered by OpenWeatherMap Geo API.
+- **📅 5-Day Extended Forecast:** A clean, horizontal summary of upcoming daily conditions with min/max temperatures.
+- **📈 Hourly Temperature Chart:** Interactive area chart showing temperature trends for the next 24 hours (powered by `recharts`).
+- **⭐ Saved Locations (Favorites):** Star your favorite cities for one-tap access from a persistent favorites bar (stored in `localStorage`).
+- **⚠️ Severe Weather Alerts:** High-visibility alert banners for significant weather events (e.g., Severe Rain Warnings).
+- **☀️ UV Index & Air Quality:** Deep meteorological data with color-coded safety levels for UVI and AQI.
 - **🤖 AI Meteorologist (Groq/LLaMA 3):** Ask complex questions like *"Should I wear a jacket in Chandigarh tonight?"* and get blazing-fast, context-aware advice.
 - **💎 Glassmorphism UI:** A sleek, premium dashboard with modern gradients, fluid animations, and high-quality vectorized Lucide icons.
 - **🌓 Dynamic Themes:** Intelligent dark/light mode switching that respects your system preferences.
-- **🏠 One-Click Reset:** Instantly return to your home location with a dedicated shortcut button or by clicking the logo.
 
 ## 🏗️ Technical Stack
 
-- **Frontend:** React 19 (Vite), native CSS Variables, Lucide Icons.
+- **Frontend:** React 19 (Vite), `recharts` for visualization, Lucide Icons, Vanilla CSS (Glassmorphism).
 - **Backend:** Java 17+, Spring Boot 3.5, Spring AI (OpenAI/Groq compliant).
-- **Inference:** Groq API (llama3-70b-8192) for high-performance AI completions.
-- **Weather Data:** OpenWeatherMap API (Current Weather & Geo Direct APIs).
+- **Inference:** Groq API (llama-3.1-8b-instant) for high-performance AI completions.
+- **Weather Data:** OpenWeatherMap API (Current, Forecast, Air Pollution, and UVI APIs).
 - **Database:** MySQL 8 (configured via Docker Compose).
 
 ## 🚀 Getting Started
