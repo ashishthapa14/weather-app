@@ -133,3 +133,31 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+.favorite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  color: #eab308;
+}
+
+.detail-icon.uvi { color: var(--text-secondary); }
+
+@media (max-width: 640px) {
+  .weather-card {
+    padding: 1.5rem;
+  }
+}

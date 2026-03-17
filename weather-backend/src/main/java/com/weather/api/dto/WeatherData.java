@@ -12,11 +12,19 @@ public class WeatherData {
     private String icon;
     private long sunrise;
     private long sunset;
+    private int aqi;
+    private double uvi;
+    private double lat;
+    private double lon;
 
     // Constructors
     public WeatherData() {}
 
     // Getters and Setters
+    public double getUvi() { return uvi; }
+    public void setUvi(double uvi) { this.uvi = uvi; }
+    public int getAqi() { return aqi; }
+    public void setAqi(int aqi) { this.aqi = aqi; }
     public String getCity() { return city; }
     public void setCity(String city) { this.city = city; }
     public String getCountry() { return country; }
@@ -39,4 +47,8 @@ public class WeatherData {
     public void setSunrise(long sunrise) { this.sunrise = sunrise; }
     public long getSunset() { return sunset; }
     public void setSunset(long sunset) { this.sunset = sunset; }
+    public double getLat() { return lat; }
+    public void setLat(double lat) { this.lat = lat; }
+    public double getLon() { return lon; }
+    public void setLon(double lon) { this.lon = lon; }
 }

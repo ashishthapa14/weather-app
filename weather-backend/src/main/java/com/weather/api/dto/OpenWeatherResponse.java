@@ -9,6 +9,7 @@ public class OpenWeatherResponse {
     private Wind wind;
     private Sys sys;
     private String name;
+    private Coord coord;
 
     // Getters and Setters
     public List<Weather> getWeather() { return weather; }
@@ -25,6 +26,19 @@ public class OpenWeatherResponse {
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
+
+    public Coord getCoord() { return coord; }
+    public void setCoord(Coord coord) { this.coord = coord; }
+
+    public static class Coord {
+        private double lat;
+        private double lon;
+
+        public double getLat() { return lat; }
+        public void setLat(double lat) { this.lat = lat; }
+        public double getLon() { return lon; }
+        public void setLon(double lon) { this.lon = lon; }
+    }
 
     public static class Weather {
         private String main;

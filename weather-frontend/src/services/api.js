@@ -12,6 +12,18 @@ export const fetchCurrentWeather = async (city) => {
   }
 };
 
+export const fetchForecast = async (city) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/forecast?city=${encodeURIComponent(city)}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch forecast data');
+    }
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const fetchAIInsights = async (city, query) => {
   try {
     const response = await fetch(`${API_BASE_URL}/ai/insights?city=${encodeURIComponent(city)}&query=${encodeURIComponent(query)}`);

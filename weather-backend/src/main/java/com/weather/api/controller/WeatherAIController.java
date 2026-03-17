@@ -24,9 +24,9 @@ public class WeatherAIController {
     @Operation(summary = "Get AI-powered weather insights for a city")
     public ResponseEntity<AIResponse> getInsights(
             @Parameter(description = "City name to check weather for", required = true)
-            @RequestParam String city,
+            @RequestParam("city") String city,
             @Parameter(description = "Natural language question (e.g., Do I need an umbrella?)", required = true)
-            @RequestParam String query) {
+            @RequestParam("query") String query) {
 
         AIResponse response = weatherAIService.getInsights(city, query);
         return ResponseEntity.ok(response);

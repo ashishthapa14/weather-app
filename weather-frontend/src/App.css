@@ -81,16 +81,35 @@
   color: var(--accent-color);
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
 .main-content {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-@media (min-width: 992px) {
-  .main-content {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
+.weather-overview {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.side-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .weather-overview {
+    grid-template-columns: 1fr;
   }
 }
 

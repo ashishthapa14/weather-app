@@ -7,6 +7,12 @@ spring:
     username: ${DB_USER:root}
     password: ${DB_PASS:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      transaction-isolation: TRANSACTION_READ_COMMITTED
 
   jpa:
     hibernate:
@@ -17,11 +23,11 @@ spring:
 
   ai:
     openai:
-      api-key: ${GROQ_API_KEY:mock_key}
+      api-key: ${GROQ_API_KEY:your_groq_api_key_here}
       base-url: https://api.groq.com/openai
       chat:
         options:
-          model: llama3-70b-8192
+          model: llama-3.1-8b-instant
 
 server:
   port: 8080
@@ -36,5 +42,5 @@ springdoc:
 
 weather:
   api:
-    key: ${OPENWEATHERMAP_API_KEY:your_openweathermap_api_key_here}
+    key: ${OPENWEATHERMAP_API_KEY:your_openweather_api_key_here}
     base-url: https://api.openweathermap.org/data/2.5
